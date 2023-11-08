@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="Do some task"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/border_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/title_text" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/desc_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Do some task desc"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/title_text"
+            app:layout_constraintTop_toBottomOf="@id/border_line" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/date_due_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Due date: "
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp"
+            android:padding="8dp"
+            app:layout_constraintStart_toStartOf="@+id/title_text"
+            app:layout_constraintTop_toBottomOf="@id/desc_text" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/date_due_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do some task desc"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/date_due_holder"
+            app:layout_constraintStart_toEndOf="@id/date_due_holder"
+            app:layout_constraintTop_toTopOf="@id/date_due_holder" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/priority_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Priority: "
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/date_due_holder"
+            app:layout_constraintEnd_toStartOf="@+id/priority_color"
+            app:layout_constraintTop_toTopOf="@+id/date_due_holder"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <View
+            android:id="@+id/priority_color"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circle_shape"
+            android:backgroundTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/priority_holder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/priority_holder" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

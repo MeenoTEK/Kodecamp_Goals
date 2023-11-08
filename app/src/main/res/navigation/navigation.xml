@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/goalsFragment">
+
+    <fragment
+        android:id="@+id/goalsFragment"
+        android:name="com.tutorials.kodecampgoals.GoalsFragment"
+        android:label="fragment_goals"
+        tools:layout="@layout/fragment_goals" >
+        <action
+            android:id="@+id/action_goalsFragment_to_goalDetailsFragment"
+            app:destination="@id/goalDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/goalDetailsFragment"
+        android:name="com.tutorials.kodecampgoals.GoalDetailsFragment"
+        android:label="fragment_goal_details"
+        tools:layout="@layout/fragment_goal_details" >
+        <argument
+            android:name="goal"
+            app:argType="com.tutorials.kodecampgoals.data.Goal" />
+    </fragment>
+</navigation>
