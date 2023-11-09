@@ -5,7 +5,7 @@ import android.content.res.ColorStateList
 import androidx.core.content.ContextCompat
 import com.tutorials.kodecampgoals.R
 
-val textList = listOf(
+private val textList = listOf(
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\n" +
             "molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\n" +
             "numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium\n" +
@@ -33,149 +33,174 @@ val textList = listOf(
 
 )
 
+private val goalList = mutableListOf(
+    Goal(
+        id = "1",
+        title = "Welcome",
+        desc = "Welcome, set your goals... reach for the sky!!",
+        priority = 3,
+        dateCreated = "Nov 1, 2023",
+        dateDue = "Nov 2, 2023",
+        category = "Goal"
 
-fun getAllGoals():List<Goal>{
+    ))
 
-    val list = listOf(
-        Goal(
-            id = 1,
-            title = "New Chanel",
-            desc = textList.random(),
-            priority = 3,
-            dateCreated = "Nov 1, 2023",
-            dateDue = "Nov 2, 2023",
-            category = "Shopping"
+private val someGoalList = mutableListOf(
+    Goal(
+        id = "1",
+        title = "New Chanel",
+        desc = textList.random(),
+        priority = 3,
+        dateCreated = "Nov 1, 2023",
+        dateDue = "Nov 2, 2023",
+        category = "Shopping"
 
-        ), Goal(
-            id = 2,
-            title = "New Balenciaga",
-            desc = textList.random(),
-            priority = 1,
-            dateCreated = "Nov 1, 2023",
-            dateDue = "Nov 10, 2023",
-            category = "Shopping"
+    ), Goal(
+        id = "2",
+        title = "New Balenciaga",
+        desc = textList.random(),
+        priority = 1,
+        dateCreated = "Nov 1, 2023",
+        dateDue = "Nov 10, 2023",
+        category = "Shopping"
 
-        ), Goal(
-            id = 3,
-            title = "New Louis Vuitton",
-            desc = textList.random(),
-            priority = 2,
-            dateCreated = "Nov 10, 2023",
-            dateDue = "Nov 22, 2023",
-            category = "Shopping"
+    ), Goal(
+        id = "3",
+        title = "New Louis Vuitton",
+        desc = textList.random(),
+        priority = 2,
+        dateCreated = "Nov 10, 2023",
+        dateDue = "Nov 22, 2023",
+        category = "Shopping"
 
-        ), Goal(
-            id = 4,
-            title = "New Slides",
-            desc = textList.random(),
-            priority = 1,
-            dateCreated = "Nov 3, 2023",
-            dateDue = "Nov 12, 2023",
-            category = "Shopping"
+    ), Goal(
+        id = "4",
+        title = "New Slides",
+        desc = textList.random(),
+        priority = 1,
+        dateCreated = "Nov 3, 2023",
+        dateDue = "Nov 12, 2023",
+        category = "Shopping"
 
-        ), Goal(
-            id = 5,
-            title = "New Versace watch",
-            desc = textList.random(),
-            priority = 1,
-            dateCreated = "Nov 10, 2023",
-            dateDue = "Nov 22, 2023",
-            category = "Shopping"
+    ), Goal(
+        id = "5",
+        title = "New Versace watch",
+        desc = textList.random(),
+        priority = 1,
+        dateCreated = "Nov 10, 2023",
+        dateDue = "Nov 22, 2023",
+        category = "Shopping"
 
-        ), Goal(
-            id = 6,
-            title = "Run 20 laps",
-            desc = textList.random(),
-            priority = 3,
-            dateCreated = "Nov 10, 2023",
-            dateDue = "Nov 22, 2023",
-            category = "Sports"
+    ), Goal(
+        id = "6",
+        title = "Run 20 laps",
+        desc = textList.random(),
+        priority = 3,
+        dateCreated = "Nov 10, 2023",
+        dateDue = "Nov 22, 2023",
+        category = "Sports"
 
-        ), Goal(
-            id = 7,
-            title = "Run 200 laps",
-            desc = textList.random(),
-            priority = 1,
-            dateCreated = "Nov 10, 2023",
-            dateDue = "Nov 22, 2023",
-            category = "Sports"
+    ), Goal(
+        id = "7",
+        title = "Run 200 laps",
+        desc = textList.random(),
+        priority = 1,
+        dateCreated = "Nov 10, 2023",
+        dateDue = "Nov 22, 2023",
+        category = "Sports"
 
-        ),Goal(
-            id = 8,
-            title = "Do 30 sit-ups",
-            desc = textList.random(),
-            priority = 2,
-            dateCreated = "Nov 10, 2023",
-            dateDue = "Nov 22, 2023",
-            category = "Sports"
+    ),Goal(
+        id = "8",
+        title = "Do 30 sit-ups",
+        desc = textList.random(),
+        priority = 2,
+        dateCreated = "Nov 10, 2023",
+        dateDue = "Nov 22, 2023",
+        category = "Sports"
 
-        ),Goal(
-            id = 9,
-            title = "Do 15 push-ups",
-            desc = textList.random(),
-            priority = 3,
-            dateCreated = "Nov 10, 2023",
-            dateDue = "Nov 22, 2023",
-            category = "Sports"
+    ),Goal(
+        id = "9",
+        title = "Do 15 push-ups",
+        desc = textList.random(),
+        priority = 3,
+        dateCreated = "Nov 10, 2023",
+        dateDue = "Nov 22, 2023",
+        category = "Sports"
 
-        ),Goal(
-            id = 10,
-            title = "Do 10 pull-ups",
-            desc = textList.random(),
-            priority = 2,
-            dateCreated = "Nov 10, 2023",
-            dateDue = "Nov 22, 2023",
-            category = "Sports"
+    ),Goal(
+        id = "10",
+        title = "Do 10 pull-ups",
+        desc = textList.random(),
+        priority = 2,
+        dateCreated = "Nov 10, 2023",
+        dateDue = "Nov 22, 2023",
+        category = "Sports"
 
-        ),Goal(
-            id = 11,
-            title = "Start food gourmet",
-            desc = textList.random(),
-            priority = 3,
-            dateCreated = "Nov 3, 2023",
-            dateDue = "Nov 4, 2023",
-            category = "Foods"
+    ),Goal(
+        id = "11",
+        title = "Start food gourmet",
+        desc = textList.random(),
+        priority = 3,
+        dateCreated = "Nov 3, 2023",
+        dateDue = "Nov 4, 2023",
+        category = "Foods"
 
-        ),Goal(
-            id = 12,
-            title = "Try crabs dishes",
-            desc = textList.random(),
-            priority = 3,
-            dateCreated = "Nov 5, 2023",
-            dateDue = "Nov 6, 2023",
-            category = "Foods"
+    ),Goal(
+        id = "12",
+        title = "Try crabs dishes",
+        desc = textList.random(),
+        priority = 3,
+        dateCreated = "Nov 5, 2023",
+        dateDue = "Nov 6, 2023",
+        category = "Foods"
 
-        ),Goal(
-            id = 13,
-            title = "Try Lobster dishes",
-            desc = textList.random(),
-            priority = 3,
-            dateCreated = "Nov 7, 2023",
-            dateDue = "Nov 8, 2023",
-            category = "Foods"
+    ),Goal(
+        id = "13",
+        title = "Try Lobster dishes",
+        desc = textList.random(),
+        priority = 3,
+        dateCreated = "Nov 7, 2023",
+        dateDue = "Nov 8, 2023",
+        category = "Foods"
 
-        ),Goal(
-            id = 14,
-            title = "Try Shark dishes",
-            desc = textList.random(),
-            priority = 3,
-            dateCreated = "Nov 9, 2023",
-            dateDue = "Nov 10, 2023",
-            category = "Foods"
+    ),Goal(
+        id = "14",
+        title = "Try Shark dishes",
+        desc = textList.random(),
+        priority = 3,
+        dateCreated = "Nov 9, 2023",
+        dateDue = "Nov 10, 2023",
+        category = "Foods"
 
-        ),Goal(
-            id = 15,
-            title = "Try Spicy dishes",
-            desc = textList.random(),
-            priority = 1,
-            dateCreated = "Nov 11, 2023",
-            dateDue = "Nov 20, 2023",
-            category = "Foods"
+    ),Goal(
+        id = "15",
+        title = "Try Spicy dishes",
+        desc = textList.random(),
+        priority = 1,
+        dateCreated = "Nov 11, 2023",
+        dateDue = "Nov 20, 2023",
+        category = "Foods"
 
-        ),
-    )
+    ),
+)
 
-    return list
+
+
+fun getAllGoals() = goalList.toList()
+
+fun updateGoalList(goal: Goal){
+    val item = goalList.find { it.id == goal.id }
+    val itemPosition = goalList.indexOf(item)
+    goalList[itemPosition] = goal
+
+}
+
+fun addNewGoal(goal: Goal){
+    goalList.add(goal)
+}
+
+fun deleteGoal(goal: Goal){
+    goalList.remove(goal)
 }
 
  fun Context.setPriorityColor(priority:Int):ColorStateList{

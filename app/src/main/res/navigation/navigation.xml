@@ -22,6 +22,10 @@
         tools:layout="@layout/fragment_goal_details" >
         <argument
             android:name="goal"
-            app:argType="com.tutorials.kodecampgoals.data.Goal" />
+            app:argType="com.tutorials.kodecampgoals.data.Goal"
+            app:nullable="true" />
+        <argument
+            android:name="options"
+            app:argType="com.tutorials.kodecampgoals.GoalsViewModel$GoalEditMode" />
     </fragment>
 </navigation>

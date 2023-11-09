@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Select priority"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/done_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="12dp"
+        android:src="@drawable/ic_done_24"
+        app:layout_constraintBottom_toBottomOf="@+id/title_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_text"
+        app:tint="?attr/colorOnSurface" />
+
+    <RadioGroup
+        android:id="@+id/priority_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="16dp"
+        android:checkedButton="@id/low_prioriy"
+        app:layout_constraintTop_toBottomOf="@+id/title_text">
+
+        <RadioButton
+            android:id="@+id/low_prioriy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 (Low)"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="353dp" />
+
+        <RadioButton
+            android:id="@+id/medium_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 (Medium)"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="467dp" />
+
+        <RadioButton
+            android:id="@+id/high_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 (High)"
+            tools:layout_editor_absoluteX="39dp"
+            tools:layout_editor_absoluteY="257dp" />
+
+
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
